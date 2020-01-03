@@ -232,7 +232,32 @@ def most_points_scored
   arr[1]
 end
 
-
-
-
+def winning_team
+home_score = 0 
+away_score = 0
+game_hash.each do|place, team| 
+    if team[:team_name] == 'Charlotte Hornets'
+      team.each do|attribute, data| 
+        if attribute == :players
+        data.each do |player|
+            away_score+= player[:points]
+          end
+        end
+      end
+    else 
+      team.each do|attribute, data| 
+        if attribute == :players
+        data.each do |player|
+            home_score += player[:[points]]
+          end
+        end
+      end
+    end
+  end
+if (home_score>away_score) 
+  return home_score 
+else
+  return away_score
+end
+end
 
