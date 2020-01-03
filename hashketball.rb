@@ -190,8 +190,8 @@ game_hash.each do|place, team|
       if attribute == :players
       data.each do |player|
           if player[:player_name] == name
-            hash = player
             binding.pry
+            hash = player
           end
         end
       end
