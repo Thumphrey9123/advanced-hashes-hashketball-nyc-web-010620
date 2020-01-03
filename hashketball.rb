@@ -277,3 +277,23 @@ def player_with_longest_name
   end
   arr[1]
 end
+
+def long_name_steals_a_ton?
+   arr = [0, '']
+  game_hash.each do|place, team| 
+    team.each do|attribute, data| 
+      if attribute == :players
+      data.each do |player|
+          if player[:steals] > arr[0]
+             arr = [player[:steals], player[:player_name]]
+          end
+        end
+      end
+    end
+  end
+  if arr[1] == player_with_longest_name
+    return true
+  else
+    return false
+  end
+end
