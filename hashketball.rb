@@ -196,7 +196,7 @@ game_hash.each do|place, team|
       end
     end
   end
-
+hash.delete(:player_name)
 hash
 end
 
