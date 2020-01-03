@@ -183,5 +183,28 @@ game_hash.each do|place, team|
 arr
 end
 
+def player_stats(player_name)
+hash = {}
+game_hash.each do|place, team| 
+    team.each do|attribute, data| 
+      if attribute == :players
+      data.each do |player|
+          if player[:player_name] == name
+            hash = player
+            binding.pry
+          end
+        end
+      end
+    end
+  end
+hash
+end
+
+
+
+
+
+
+
 
 
