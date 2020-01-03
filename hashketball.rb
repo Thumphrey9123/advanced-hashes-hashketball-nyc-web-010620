@@ -248,16 +248,16 @@ game_hash.each do|place, team|
       team.each do|attribute, data| 
         if attribute == :players
         data.each do |player|
-            home_score += player[:[points]]
+            home_score += player[:points]]
           end
         end
       end
     end
   end
 if (home_score>away_score) 
-  return home_score 
+  return 'Brooklyn Nets' 
 else
-  return away_score
+  return 'Charlotte Hornets'
 end
 end
 
