@@ -174,7 +174,7 @@ game_hash.each do|place, team|
         if attribute == :players
         data.each do |player|
           binding.pry
-            arr << player[:num]
+            arr << player[:number]
           end
         end
       end
