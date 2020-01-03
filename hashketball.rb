@@ -275,5 +275,5 @@ def player_with_longest_name
       end
     end
   end
-arr[1]
+  arr[1]
 end
