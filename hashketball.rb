@@ -147,7 +147,7 @@ end
 
 def player_stats(name)
    game_hash.each do|place, team| 
-    binding.pry
+    if team[:team_name] == name
     team.each do|attribute, data| 
       if attribute == :colors
         return data
