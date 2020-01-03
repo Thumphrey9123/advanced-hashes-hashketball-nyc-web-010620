@@ -159,7 +159,7 @@ end
 
 
 def team_names
-  arr = [nil]
+  arr = []
 game_hash.each do |place,team|
   arr << team[:team_names]
 end
