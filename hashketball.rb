@@ -163,7 +163,7 @@ def team_names
 game_hash.each do |place,team|
   arr << team[:team_names]
 end
-  arr
+  arr || nil
 end
 
 def player_numbers(team_name)
