@@ -201,8 +201,19 @@ hash
 end
 
 def big_shoe_rebounds
-  
-  
+arr = [0, 0]
+  game_hash.each do|place, team| 
+    team.each do|attribute, data| 
+      if attribute == :players
+      data.each do |player|
+          if player[:shoe] > arr[0]
+             arr = [player[:shoe], player[:rebounds]]
+          end
+        end
+      end
+    end
+  end
+  arr[1]
 end
 
 
