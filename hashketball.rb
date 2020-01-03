@@ -248,7 +248,7 @@ game_hash.each do|place, team|
       team.each do|attribute, data| 
         if attribute == :players
         data.each do |player|
-            home_score += player[:points]]
+            home_score += player[:points]
           end
         end
       end
