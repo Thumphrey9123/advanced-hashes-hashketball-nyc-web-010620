@@ -216,7 +216,21 @@ arr = [0, 0]
   arr[1]
 end
 
-
+def most_points_scored
+  arr = [0, '']
+  game_hash.each do|place, team| 
+    team.each do|attribute, data| 
+      if attribute == :players
+      data.each do |player|
+          if player[:points] > arr[0]
+             arr = [player[:points], player[:player_name]]
+          end
+        end
+      end
+    end
+  end
+  arr[1]
+end
 
 
 
