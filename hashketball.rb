@@ -148,12 +148,8 @@ end
 def player_stats(name)
    game_hash.each do|place, team| 
     team.each do|attribute, data| 
-      if attribute == :players
-      data.each do |player|
-          if player[:player_name] == name
-            return player[:points]
-          end
-        end
+      if attribute == :colors
+        return data
       end
     end
   end
